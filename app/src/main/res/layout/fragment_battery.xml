@@ -53,6 +53,8 @@
                     android:inputType="number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
+
+
         </LinearLayout>
         <Button
                 android:id="@+id/button_batteryLevelNotify"
@@ -62,5 +64,36 @@
                 android:text="@string/notify"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/batteryLevel"/>
+
+        <Button
+            android:id="@+id/send_string"
+            android:layout_margin="15dp"
+            android:textColor="@color/accent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send String"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/button_batteryLevelNotify"/>
+
+        <EditText
+            android:id="@+id/delay"
+            android:layout_margin="15dp"
+            android:textColor="@color/primary_dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Time Delay"
+            android:inputType="number"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/send_string"/>
+
+        <Button
+            android:id="@+id/getstring"
+            android:layout_margin="15dp"
+            android:textColor="@color/accent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get String"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/delay"/>
     </RelativeLayout>
 </FrameLayout>
