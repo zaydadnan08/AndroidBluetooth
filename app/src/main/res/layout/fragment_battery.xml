@@ -23,57 +23,11 @@
                     android:layout_height="wrap_content">
         <TextView
                 android:id="@+id/textView_serviceName"
-                android:text="@string/batteryService_name"
+                android:text="Image Bluetooth"
                 android:textAppearance="@style/subheader"
                 android:gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"/>
-        <LinearLayout
-                android:id="@+id/batteryLevel"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textView_serviceName">
-            <ImageView
-                    android:id="@+id/imageView_batteryIcon"
-                    android:src="@drawable/battery_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            <SeekBar
-                    android:id="@+id/seekBar_batteryLevel"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-            <EditText
-                    android:id="@+id/textView_batteryLevel"
-                    android:ems="3"
-                    android:maxLength="3"
-                    android:gravity="center"
-                    android:inputType="number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-
-        </LinearLayout>
-        <Button
-                android:id="@+id/button_batteryLevelNotify"
-                android:textColor="@color/accent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/notify"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/batteryLevel"/>
-
-        <Button
-            android:id="@+id/send_string"
-            android:layout_margin="15dp"
-            android:textColor="@color/accent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Send String"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/button_batteryLevelNotify"/>
 
         <EditText
             android:id="@+id/delay"
@@ -81,10 +35,11 @@
             android:textColor="@color/primary_dark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Time Delay (10 = 1ms)"
+            android:hint="Time Delay (ms)"
+            android:text="1"
             android:inputType="number"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/send_string"/>
+            android:layout_below="@id/textView_serviceName"/>
 
         <Button
             android:id="@+id/getstring"
@@ -92,8 +47,9 @@
             android:textColor="@color/accent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Get String"
+            android:text="Send Image"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/delay"/>
+
     </RelativeLayout>
 </FrameLayout>
